@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Get a random number, check its last digit and compare it to 5, 0 and 6.
+ * main - Get a random number, check its last digit, compare it to 5, 0 and 6.
  * Return: 0
  */
 int main(void)
