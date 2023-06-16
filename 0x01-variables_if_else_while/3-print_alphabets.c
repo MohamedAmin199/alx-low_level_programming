@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * main - prints the alphabet in lowercase, and then in uppercase.
+ * main - prints the alphabet in lowercase,
+ * and then in uppercase.
  * Return: 0
  */
 int main(void)
@@ -13,7 +14,7 @@ int main(void)
 		c++;
 	}
 
-	char c = 'A';
+	c = 'A';
 
 	while (c <= 'Z')
 	{
