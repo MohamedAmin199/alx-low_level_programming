@@ -12,12 +12,6 @@
 
 void print_remaining_days(int month, int day, int year)
 {
-	/**
-	 * Leap year occur every 4 years,
-	 * and every 100 years unless the year is divisible by 400.
-	 */
-
-
 	if ((year % 100 == 0 && year % 400 == 0) || (year % 4 == 0))
 	{
 		if (month >= 2 && day >= 60)
