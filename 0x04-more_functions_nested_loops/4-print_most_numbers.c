@@ -11,11 +11,7 @@ void print_most_numbers(void)
 
 	for (n == 0; n <= 9; n++)
 
-		if (n == 2 && n == 4)
-		{
-			return (0);
-		}
-		else
+		if (n != 2 && n != 4)
 		{
 			_putchar ('0' + n);
 		}
