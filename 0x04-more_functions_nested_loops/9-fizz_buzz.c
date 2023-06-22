@@ -4,7 +4,7 @@
  * For multiples of three, Fizz is printed instead of the number,
  * For multiples of five, Buzz is printed instead of the number,
  * and for multiples of both three and five, FizzBuzz.
- * Return: 0
+ * Return: void.
  */
 
 int main(void)
