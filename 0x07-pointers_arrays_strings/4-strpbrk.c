@@ -1,7 +1,8 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strpbrk - A function that searches a string
- *	for any of a set of bytes.
+ * for any of a set of bytes.
  * @s: The string.
  * @accept: The bytes in the string.
  * Return: NULL if no such byte is found.
