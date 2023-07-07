@@ -5,7 +5,7 @@
  * Return: converted integer.
  */
 
-int _atoi(char *s);
+int _atoi(char *s)
 {
 	unsigned int num = 0;
 	int sign = 1;
