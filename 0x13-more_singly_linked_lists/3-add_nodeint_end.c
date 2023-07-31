@@ -21,12 +21,11 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	}
 	else
 	{
-		listint_t *current = *head;
-		while (current->next != NULL)
-		{
-			current = current->next;
-		}
-		current->next = new;
+		last = *head;
+		while (last->next != NULL)
+			last = last->next;
+		last->next = new;
 	}
-	return (new);
+
+	return (*head);
 }
