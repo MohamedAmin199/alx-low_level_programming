@@ -6,29 +6,31 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *tmp_n = head;
+	const listint_t *tmp_n = NULL;
+	const listint_t *l_n = NULL;
 	size_t counter = 0;
-	int visited_node = 0;
-	const listint_t *visited_nodes[1024]; /* assuming a maximum of 1024 nodes */
+	size_t new_n;
 
+	tmp_n = head;
 	while (tmp_n)
 	{
 		printf("[%p] %d\n", (void *)tmp_n, tmp_n->n);
 		counter++;
-
-		/* Check if the current node has been visited before */
-		for (int i = 0; i < visited_node; i++)
+		tmp_n = tmp_n->next;
+		l_n = head;
+		new_n = 0;
+		while (new_n < counter)
 		{
-			if (tmp_n == visited_nodes[i])
+			if (tmp_n == l_n)
 			{
 				printf("-> [%p] %d\n", (void *)tmp_n, tmp_n->n);
 				return (counter);
 			}
+			l_n = l_n->next;
+			new_n++;
 		}
-		/* Mark the current node as visited */
-		visited_nodes[visited_node++] = tmp_n;
-
-		tmp_n = tmp_n->next;
+		if (!head)
+			exit(98);
 	}
 	return (counter);
 }
