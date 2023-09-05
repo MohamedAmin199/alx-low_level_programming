@@ -15,6 +15,7 @@ int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
 
 
+int main(int __attribute__((__unused__)) argc, char *argv[]);
 void verify_elf_file(unsigned char *e_ident);
 void display_magic(unsigned char *e_ident);
 void display_class(unsigned char *e_ident);
