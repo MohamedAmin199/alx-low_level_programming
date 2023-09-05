@@ -1,17 +1,13 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <elf.h>
+
 
 /**
  * main - Displays the information contained in the ELF header.
  * @argc: The number of arguments.
  * @argv: An array of pointers.
- * Return: 0
+ * Return: 0 on success.
+ *
+ * Description: If the file is not an ELF File or if fails - exit code 98.
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
