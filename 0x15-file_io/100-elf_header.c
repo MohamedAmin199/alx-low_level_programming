@@ -57,7 +57,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
  * verify_elf_file - verify if a file is an ELF file.
  * @e_ident: A pointer to an array.
  */
-void verify_elf_file(unsigned char *e_ident);
+void verify_elf_file(unsigned char *e_ident)
 {
 	int i;
 
@@ -79,7 +79,7 @@ void verify_elf_file(unsigned char *e_ident);
  * display_magic - Display the magic numbers of an ELF header.
  * @e_ident: A pointer to an array.
  */
-void display_magic(unsigned char *e_ident);
+void display_magic(unsigned char *e_ident)
 {
 	int i;
 
@@ -101,7 +101,7 @@ void display_magic(unsigned char *e_ident);
  * display_class - Display the class of an ELF header.
  * @e_ident: A pointer to an array.
  */
-void display_class(unsigned char *e_ident);
+void display_class(unsigned char *e_ident)
 {
 	printf("  Class:         ");
 
@@ -126,7 +126,7 @@ void display_class(unsigned char *e_ident);
  * display_data - Display the data of an ELF header.
  * @e_ident: A pointer to an array.
  */
-void display_data(unsigned char *e_ident);
+void display_data(unsigned char *e_ident)
 {
 	printf("  Data:         ");
 
@@ -151,7 +151,7 @@ void display_data(unsigned char *e_ident);
  * display_version - Display the version of an ELF header.
  * @e_ident: A pointer to an array.
  */
-void display_version(unsigned char *e_ident);
+void display_version(unsigned char *e_ident)
 {
 	printf("  Version:         %d",
 	       e_ident[EI_VERSION]);
@@ -172,7 +172,7 @@ void display_version(unsigned char *e_ident);
  * display_abi - Display the ABI of an ELF header.
  * @e_ident: A pointer to an array.
  */
-void display_abi(unsigned char *e_ident);
+void display_abi(unsigned char *e_ident)
 {
 	printf("  ABI Version:         %d\n",
 	       e_ident[EI_ABIVERSION]);
@@ -183,7 +183,7 @@ void display_abi(unsigned char *e_ident);
  * display_osabi - Display the OS/ABI of an ELF header.
  * @e_ident: A pointer to an array.
  */
-void display_osabi(unsigned char *e_ident);
+void display_osabi(unsigned char *e_ident)
 {
 	printf("  OS/ABI:         ");
 
@@ -230,7 +230,7 @@ void display_osabi(unsigned char *e_ident);
  * @e_type: The ELF type.
  * @e_ident: A pointer to an array.
  */
-void display_type(unsigned int e_type, unsigned char *e_ident);
+void display_type(unsigned int e_type, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 		e_type >>= 8;
@@ -265,7 +265,7 @@ void display_type(unsigned int e_type, unsigned char *e_ident);
  * @e_entry: The address.
  * @e_ident: A pointer to an array.
  */
-void display_entry(unsigned long int e_entry, unsigned char *e_ident);
+void display_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
 	printf("  Entry point address:         ");
 
@@ -288,7 +288,7 @@ void display_entry(unsigned long int e_entry, unsigned char *e_ident);
  * close_elf - Closes an ELF file.
  * @elf: The file descriptor.
  */
-void close_elf(int elf);
+void close_elf(int elf)
 {
 	if (close(elf) == -1)
 	{
