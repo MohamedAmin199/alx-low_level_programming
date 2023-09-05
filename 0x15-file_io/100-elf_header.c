@@ -171,8 +171,8 @@ void display_version(unsigned char *e_ident);
  */
 void display_abi(unsigned char *e_ident);
 {
-	printf("  Version:         %d",
-               e_ident[EI_ABIVERSION]);
+	printf("  ABI Version:         %d\n",
+	       e_ident[EI_ABIVERSION]);
 }
 
 
