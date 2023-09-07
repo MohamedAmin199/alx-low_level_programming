@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * main - Displays the information contained in the ELF header.
  * @argc: The number of arguments.
@@ -61,7 +60,7 @@ void verify_elf_file(unsigned char *e_ident)
 {
 	int i;
 
-	for (i = 0; i < 4; i++)
+	while (i < 4)
 	{
 		if (e_ident[i] != 127 &&
 		    e_ident[i] != 'E' &&
@@ -71,6 +70,7 @@ void verify_elf_file(unsigned char *e_ident)
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
 		}
+		i++;
 	}
 }
 
